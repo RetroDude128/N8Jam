@@ -2,14 +2,14 @@
 20 input
 30 ? chr$(147):poke 53281,0:poke 53280,0:poke 646,1:poke 647,1
 40 ? "[insert game title here]":g=0
-50 ?"":?"you're sitting down on a chair":?"inside of your own home, mid 2020"
+50 ? "":?"you're sitting down on a chair":?"inside of your own home, mid 2020"
 60 ?"what do you do?" 
 70 ? "1. get up and do something for once"
 80 ? "2. there is only 1"
 90 input""; k$
 100 if k$="1" goto 120
-110 ?"only 1 i said":goto 50
-120 ?"you finally went outside of your":?"house for once"
+110 ? "only 1 i said":goto 50
+120 ? "you finally went outside of your":?"house for once"
 130 cv=peek(53248):if cv=0 then goto 150
 140 goto 180
 150 ?"... oh wait, covid exists(poke 53248,1)"
@@ -25,9 +25,13 @@
 250 if k$="2" then goto 300
 260 if k$="3" then goto 320
 270 ?"invalid option!":goto 190
-280 ?"both you had such a great time playing video games"
-290 ?"you went to go home,":? "after going to the store for a minute":goto 330
-300 ?"you went straight to the store, maybe pi  ck up some donuts as well"
-310 goto 330
-320 ? "you ordered some donuts to bring home af  ter a quick visit to the store"
-330 ? "end of prototype":poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
+280 ? "both you had such a great time playing video games"
+290 ? "you went to go home,":? "after going to the store for a minute":goto 380
+300 ? "you went straight to the store, maybe   pick up some donuts as well"
+310 goto 340
+320 if peek=1 then goto 380
+340 ?"they're out of donuts.":? "guess you'll have to wait til the end of time(poke 53258,1)"
+350 input
+360 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
+370 ? "you got your donuts! time to take a trip to the store": goto 380
+380 input
