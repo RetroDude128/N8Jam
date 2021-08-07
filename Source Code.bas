@@ -1,5 +1,5 @@
 10 ? "this software should only be run on a c64 computer or emulator"
-20 if k$="z" then goto 40
+20 get k$:if k$="z" then goto 40
 30 goto 20
 40 ? chr$(147):poke 53281,0:poke 53280,0
 50 goto 20
