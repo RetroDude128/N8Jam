@@ -26,12 +26,18 @@
 260 if k$="3" then goto 320
 270 ?"invalid option!":goto 190
 280 ? "both you had such a great time playing video games"
-290 ? "you went to go home,":? "after going to the store for a minute":goto 380
+290 ? "you went to go home,":? "after going to the store for a minute":goto 370
 300 ? "you went straight to the store, maybe   pick up some donuts as well"
 310 goto 340
-320 if peek=1 then goto 380
-340 ?"they're out of donuts.":? "guess you'll have to wait til the end of time(poke 53258,1)"
-350 input
-360 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
-370 ? "you got your donuts! time to take a trip to the store": goto 380
-380 input
+320 c=peek(53258):if c=1 then goto 360
+330 ?"welp, they're out of donuts. (poke 53258,1)"
+340 input
+350 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
+360 ? "you got your donuts! time to take a trip to the store"
+370 input
+380 if w=10 then goto 430 
+390 ?"a wall suddenly falls down":? " around you from all sides (add lines "
+400 ?"5 input ";:?chr$(34);"w should be";:?chr$(34);:?"; w":?"into the program and input 10)
+410 input
+420 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
+430 ? "sussy placeholder"
