@@ -43,9 +43,13 @@
 430 ? "so your pc got stolen"
 440 ? "time to find a new one"
 450 input:e=peek(53260):if e=176 then goto 490
-460 ?"game error(list 450 and poke 53260 with ???)"
+460 ?"game has crashed due to unknown reason(list 450 and poke 53260 with ???)"
 470 input
 480 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
-490 ? chr$(147):? "you activated the area skip cheat!"
-500 ? "since an error was detected and debug mode was activated"
-510 ? "you get to skip the section with the error"
+490 ? chr$(147):? "[error detected]"
+500 ? "an error has been detected and since    debug mode was activated"
+510 ? "user gets to skip the section with error"
+520 input
+530 ? "m: moon"
+540 ? "n: new world"
+550 ? "s: the store"
