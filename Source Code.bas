@@ -37,12 +37,15 @@
 370 input
 380 if w=10 then goto 430 
 390 ?"a wall suddenly falls down":? " around you from all sides"
-400 ?"(list line 400 and then type)":rem 5 input""; w
+400 ?"(list line 400, then type the command in the comment)":rem 5 input""; w
 410 input
 420 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
 430 ? "so your pc got stolen"
 440 ? "time to find a new one"
-450 e=peek(53260):if e=176 then goto 490
-460 ?"game error(poke the address with the    value found when listing line 450)"
+450 input:e=peek(53260):if e=176 then goto 490
+460 ?"game error(list 450 and poke 53260 with ???)"
 470 input
 480 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
+490 ? chr$(147):? "you activated the area skip cheat!"
+500 ? "since an error was detected and debug mode was activated"
+510 ? "you get to skip the section with the error"
