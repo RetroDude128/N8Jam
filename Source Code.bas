@@ -40,4 +40,5 @@
 400 ?"5 input ";:?chr$(34);"w should be";:?chr$(34);:?"; w":?"into the program and input 10)
 410 input
 420 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
-430 ? "sussy placeholder"
+430 ? "so you're pc got stolen"
+440 ? "time to find a new one"
