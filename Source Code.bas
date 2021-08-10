@@ -36,9 +36,13 @@
 360 ? "you got your donuts! time to take a trip to the store"
 370 input
 380 if w=10 then goto 430 
-390 ?"a wall suddenly falls down":? " around you from all sides (add lines "
-400 ?"5 input ";:?chr$(34);"w should be";:?chr$(34);:?"; w":?"into the program and input 10)
+390 ?"a wall suddenly falls down":? " around you from all sides"
+400 ?"(list line 400 and then type)":rem 5 input""; w
 410 input
 420 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
-430 ? "so you're pc got stolen"
+430 ? "so your pc got stolen"
 440 ? "time to find a new one"
+450 e=peek(53260):if e=176 then goto 490
+460 ?"game error(poke the address with the    value found when listing line 450)"
+470 input
+480 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
