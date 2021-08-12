@@ -79,7 +79,7 @@
 790 ti$="000000"
 800 wait 162,64:poke 53281,15:poke 53280,15
 810 ti$="000000"
-820 wait 162,64::poke 53281,1:poke 53280,1:poke 646,0
+820 wait 162,64:? chr$(147):poke 53281,1:poke 53280,1:poke 646,0
 830 ? "credits"
 840 ? "marioman2020/retroboi128"
 850 ? "programmer and everything else"
@@ -90,4 +90,4 @@
 900 ti$="000000"
 910 wait 162,64:poke 53281,6:poke 53280,14
 920 ti$="000000"
-930 wait 162,64:poke 646,14:new
+930 wait 162,64:poke 646,14:? chr$(147):new
