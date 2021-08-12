@@ -82,14 +82,37 @@
 820 wait 162,64:? chr$(147):poke 53281,1:poke 53280,1:poke 646,0
 830 ti$="000000"
 840 wait 162,64
-850 ? "credits"
-860 ? "marioman2020/retroboi128"
-870 ? "programmer and everything else"
-880 ? "and n8dev, for hosting n8jam"
-890 ? "try to make your own game in c64 basic"
-900 input:for x=0 to 25:?"":next:ti$="000000"
-910 wait 162,64:poke 53281,14:poke 53280,14
+850 ti$="000000"
+860 wait 162,64:poke 646,15:l=870:?chr$(147)
+870 ? "credits"
+880 ? "marioman2020/retroboi128"
+890 ? "programmer and everything else"
+900 ? "and n8dev, for hosting n8jam"
+910 ? "try to make your own game in c64 basic"
 920 ti$="000000"
-930 wait 162,64:poke 53281,6:poke 53280,14
-940 ti$="000000"
-950 wait 162,64:poke 646,14:? chr$(147):new
+930 wait 162,64:poke 646,12:l=890:?chr$(147)
+940 ? "credits"
+950 ? "marioman2020/retroboi128"
+960 ? "programmer and everything else"
+970 ? "and n8dev, for hosting n8jam"
+980 ? "try to make your own game in c64 basic"
+990 ti$="000000"
+1000 wait 162,64:poke 646,0:l=910:?chr$(147)
+1010 ? "credits"
+1020 ? "marioman2020/retroboi128"
+1030 ? "programmer and everything else"
+1040 ? "and n8dev, for hosting n8jam"
+1050 ? "try to make your own game in c64 basic"
+1060 ti$="000000"
+1070 wait 162,64:?chr$(147)
+1080 ? "credits"
+1090 ? "marioman2020/retroboi128"
+1100 ? "programmer and everything else"
+1110 ? "and n8dev, for hosting n8jam"
+1120 ? "try to make your own game in c64 basic"
+1130 input:for x=0 to 25:?"":next:ti$="000000"
+1140 wait 162,64:poke 53281,14:poke 53280,14
+1150 ti$="000000"
+1160 wait 162,64:poke 53281,6:poke 53280,14
+1170 ti$="000000"
+1180 wait 162,64:poke 646,14:? chr$(147):new
