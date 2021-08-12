@@ -53,3 +53,30 @@
 530 ? "m: moon"
 540 ? "n: new world"
 550 ? "s: the store"
+560 if k$="m" then goto 590
+570 if k$="n" then goto 610
+580 if k$="s" then goto 630
+590 ? "you went to the moon and obtained the lunar pc":g=1
+600 input:goto 650
+610 ? "you ended up in a random pup2 - the new world promotion":g=2
+620 input:goto 650
+630 ? "atleast you saved up from selling some indie games you made":g=3
+640 input
+650 ? "after the not so long adventure, you hear an echo in the distance"
+660 ? "you feel like there's a longer adventure among us soon" 
+670 if g=1 then goto 710
+680 if g=2 then goto 720
+690 if g=3" then goto 730
+700 goto 740
+710 ? "lunar ending": goto 750
+720 ? "promotion ending": goto 750
+730 ? chr$(34);:?"haha normie";:? chr$(34): goto 750
+740 ? "cheater!!";:? " live in pain!!(run stop can't help you now)":poke 788,52
+750 goto 740
+760input
+770 ti$="000000"
+780 wait 162,64:poke 53281,12:poke 53280,12
+790 ti$="000000"
+800 wait 162,64:poke 53281,15:poke 53280,15
+810 ti$="000000"
+820 wait 162,64::poke 53281,1:poke 53280,1
