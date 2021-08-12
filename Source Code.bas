@@ -52,7 +52,7 @@
 520 input
 530 ? "m: moon"
 540 ? "n: new world"
-550 ? "s: the store"
+550 ? "s: the store":input""; k$
 560 if k$="m" then goto 590
 570 if k$="n" then goto 610
 580 if k$="s" then goto 630
@@ -68,9 +68,9 @@
 680 if g=2 then goto 720
 690 if g=3" then goto 730
 700 goto 740
-710 ? "lunar ending": goto 750
-720 ? "promotion ending": goto 750
-730 ? chr$(34);:?"haha normie";:? chr$(34): goto 750
+710 ? "lunar ending": goto 760
+720 ? "promotion ending": goto 760
+730 ? chr$(34);:?"haha normie";:? chr$(34): goto 760
 740 ? "cheater!!";:? " live in pain!!(run stop can't help you now)":poke 788,52
 750 goto 740
 760input
@@ -79,4 +79,15 @@
 790 ti$="000000"
 800 wait 162,64:poke 53281,15:poke 53280,15
 810 ti$="000000"
-820 wait 162,64::poke 53281,1:poke 53280,1
+820 wait 162,64::poke 53281,1:poke 53280,1:poke 646,0
+830 ? "credits"
+840 ? "marioman2020/retroboi128"
+850 ? "programmer and everything else"
+860 ? "and n8dev, for hosting n8jam"
+870 ? "... try to make your own game in c64 basic"
+880 input:for x=0 to 25:?"":next:ti$="000000"
+890 wait 162,64:poke 53281,14:poke 53280,14
+900 ti$="000000"
+910 wait 162,64:poke 53281,6:poke 53280,14
+920 ti$="000000"
+930 wait 162,64::poke 53281,1:poke 53280,1:poke 646,14:new
