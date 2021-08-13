@@ -1,7 +1,7 @@
 10 ? chr$(147):? "press enter to continue if on c64"
 20 input
 30 ? chr$(147):poke 53281,0:poke 53280,0:poke 646,1:poke 647,1
-40 ? "[insert game title here]":g=0
+40 ? "[insert game name here]":g=0
 50 ? "":?"you're sitting down on a chair":?"inside of your own home, mid 2020"
 60 ?"what do you do?" 
 70 ? "1. get up and do something for once"
@@ -66,7 +66,7 @@
 660 ? "you feel like there's a longer adventure among us soon" 
 670 if g=1 then goto 710
 680 if g=2 then goto 720
-690 if g=3" then goto 730
+690 if g=3 then goto 730
 700 goto 740
 710 ? "lunar ending": goto 760
 720 ? "promotion ending": goto 760
