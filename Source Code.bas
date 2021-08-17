@@ -12,7 +12,7 @@
 120 ? "you finally went outside of your":?"house for once"
 130 cv=peek(53248):if cv=0 then goto 150
 140 goto 180
-150 ?"... oh wait, covid exists(poke 53248,1)"
+150 ?"... oh wait, covid exists(type poke 53248,1 after pressing enter)"
 160 input""; k$
 170 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
 180 ? "good thing covid completely disappeared yesterday"
