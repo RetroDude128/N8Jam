@@ -1,6 +1,6 @@
 10 ? chr$(147):? "press enter if on":?"vic-20"
 20 input""; k$
-30 ? chr$(147):poke 53281,0:poke 53280,0:poke 646,1:poke 647,1
+30 ? chr$(147)
 40 ? "[insert game name here]":g=0
 50 ? "":?"you're sitting down on a chair":?"inside of your own home, mid 2020"
 60 ?"what do you do?" 
@@ -10,11 +10,11 @@
 100 if k$="1" goto 120
 110 ? "only 1 i said":goto 50
 120 ? "you finally went outside of your":?"house for once"
-130 cv=peek(53248):if cv=0 then goto 150
+130 cv=peek(8192):if cv=32 then goto 150
 140 goto 180
-150 ?"... oh wait, covid exists(type poke 53248,1 after pressing enter)"
+150 ?"... oh wait, covid exists(type poke 8192,1 after pressing enter)"
 160 input""; k$
-170 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
+170 ? chr$(147):end
 180 ? "good thing covid completely disappeared yesterday"
 190 ? "where to go now?"
 200 ? "1. a friend's house"
@@ -29,25 +29,25 @@
 290 ? "you went to go home,":? "after going to the store for a minute":goto 370
 300 ? "you went straight to the store, maybe   pick up some donuts as well"
 310 goto 340
-320 c=peek(53258):if c=1 then goto 360
-330 ?"welp, they're out of donuts. (poke 53258,1)"
+320 c=peek(8202):if c=1 then goto 360
+330 ?"welp, they're out of donuts. (poke 8202,1)"
 340 input""; k$
-350 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
+350 ? chr$(147):end
 360 ? "you got your donuts! time to take a trip to the store"
 370 input""; k$
 380 if w=10 then goto 430 
 390 ?"a wall suddenly falls down":? " around you from all sides"
 400 ?"(list line 400, then type the command in the comment)":rem 5 input""; w
 410 input""; k$
-420 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
+420 ? chr$(147):end
 430 ? "so your pc got stolen"
 440 ? "time to find a new one"
-450 input""; k$:e=peek(53260):if e=176 then goto 490
-460 ?"game has crashed due to unknown reason(list 450 and poke 53260 with ???)"
+450 input""; k$:e=peek(8200):if e=176 then goto 490
+460 ?"game has crashed due to unknown reason(list 450 and poke 8200 with ???)"
 470 input""; k$
 480 ? chr$(147):poke 53281,6:poke 53280,14:poke 646,14:poke 647,14:end
 490 ? chr$(147):? "[error detected]"
-500 ? "an error has been detected and since    debug mode was activated"
+500 ? "an error has been detected and since debug mode was activated"
 510 ? "user gets to skip the section with error"
 520 input""; k$
 530 ? "m: moon"
